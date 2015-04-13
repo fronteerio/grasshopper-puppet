@@ -19,6 +19,12 @@ class ghservice::grasshopper {
         install_method                => $install_method,
         install_config                => $install_config,
 
+        $config_db_name               => hiera('postgresql_db_name'),
+        $config_db_user               => hiera('postgresql_user'),
+        $config_db_pass               => hiera('postgresql_pass'),
+        $config_db_host               => hiera('postgresql_host'),
+        $config_db_port               => hiera('postgresql_port'),
+
         os_user                       => hiera('app_os_user'),
         os_group                      => hiera('app_os_group'),
 

@@ -59,9 +59,11 @@
 
     /* PostgreSQL settings */
     "ghservice::postgresql::version": "",
-    "ghservice::postgresql::db": "grasshopper",
-    "ghservice::postgresql::user": "grasshopper",
-    "ghservice::postgresql::pass": "grasshopper",
+    "postgresql_db_name": "grasshopper",
+    "postgresql_user": "grasshopper",
+    "postgresql_pass": "grasshopper",
+    "postgresql_host": "localhost",
+    "postgresql_port": 5432,
 
     /* Apache directives */
     "ghservice::apache::version": "",

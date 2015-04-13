@@ -21,9 +21,11 @@ class grasshopper (
     $config_servers_admin_host,
 
     # DB
-    $config_db_name = hiera('ghservice::postgresql::db'),
-    $config_db_user = hiera('ghservice::postgresql::user'),
-    $config_db_pass = hiera('ghservice::postgresql::pass'),
+    $config_db_name,
+    $config_db_user,
+    $config_db_pass,
+    $config_db_host,
+    $config_db_port,
 
     # Initialisation
     $ensure_tenant_admin_created = "true",

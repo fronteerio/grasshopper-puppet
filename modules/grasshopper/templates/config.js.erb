@@ -37,9 +37,10 @@ config.db = {
     'database': '<%= @config_db_name %>',
     'username': '<%= @config_db_user %>',
     'password': '<%= @config_db_pass %>',
-    'port': 5432,
-    'dropOnStartup': false
+    'host': '<%= @config_db_host %>',
+    'port': <%= @config_db_port %>,
 };
+    'dropOnStartup': false
 
 // Pretty-print the logs to standard out
 var prettyStdOut = new PrettyStream();
