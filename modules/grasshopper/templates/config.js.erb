@@ -17,7 +17,6 @@
  */
 
 var bunyan = require('bunyan');
-var PrettyStream = require('bunyan-prettystream');
 
 // The global config object
 var config = module.exports = {};
@@ -39,12 +38,8 @@ config.db = {
     'password': '<%= @config_db_pass %>',
     'host': '<%= @config_db_host %>',
     'port': <%= @config_db_port %>,
-};
     'dropOnStartup': false
-
-// Pretty-print the logs to standard out
-var prettyStdOut = new PrettyStream();
-prettyStdOut.pipe(process.stdout);
+};
 
 /*!
  * The log related configuration
@@ -59,7 +54,7 @@ config.log = {
     'streams': [
         {
             'level': 'info',
-            'stream': prettyStdOut
+            'path': '/opt/grasshopper/server.log'
         }
     ],
     'serializers': {
